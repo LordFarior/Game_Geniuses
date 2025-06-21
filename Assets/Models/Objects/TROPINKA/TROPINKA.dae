@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<COLLADA xmlns="http://www.collada.org/2005/11/COLLADASchema" version="1.4.1">
+  <asset>
+    <created>2025-06-21T17:33:29Z</created>
+    <modified>2025-06-21T17:33:29Z</modified>
+    <revision>1.0</revision>
+  </asset>
+  <library_images>
+    <image id="TROPINKA-diffuse-tex" name="TROPINKA-diffuse-tex">
+      <init_from>TROPINKA_TROPINKA_diffuse.png</init_from>
+    </image>
+    <image id="TROPINKA-emissive-tex" name="TROPINKA-emissive-tex">
+      <init_from>TROPINKA_TROPINKA_emissive.png</init_from>
+    </image>
+  </library_images>
+  <library_effects>
+    <effect id="TROPINKA-Effect">
+      <profile_COMMON>
+        <newparam sid="TROPINKA-diffuse-surface">
+          <surface type="2D">
+            <init_from>TROPINKA-diffuse-tex</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="TROPINKA-emissive-surface">
+          <surface type="2D">
+            <init_from>TROPINKA-emissive-tex</init_from>
+            <format>A8R8G8B8</format>
+          </surface>
+        </newparam>
+        <newparam sid="TROPINKA-diffuse-sampler">
+          <sampler2D>
+            <source>TROPINKA-diffuse-surface</source>
+            <wrap_s>CLAMP</wrap_s>
+            <wrap_t>CLAMP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <newparam sid="TROPINKA-emissive-sampler">
+          <sampler2D>
+            <source>TROPINKA-emissive-surface</source>
+            <wrap_s>CLAMP</wrap_s>
+            <wrap_t>CLAMP</wrap_t>
+            <minfilter>NONE</minfilter>
+            <magfilter>NONE</magfilter>
+            <mipfilter>NONE</mipfilter>
+          </sampler2D>
+        </newparam>
+        <technique sid="phong1">
+          <phong>
+            <emission>
+              <texture texcoord="TROPINKA-tex-bind" texture="TROPINKA-emissive-sampler"/>
+            </emission>
+            <ambient>
+              <color>1.0 1.0 1.0 1.0</color>
+            </ambient>
+            <diffuse>
+              <texture texcoord="TROPINKA-tex-bind" texture="TROPINKA-diffuse-sampler"/>
+            </diffuse>
+            <specular>
+              <color>0.0 0.0 0.0 1.0</color>
+            </specular>
+            <shininess>
+              <float>5.0</float>
+            </shininess>
+            <reflective>
+              <color>1.0 1.0 1.0 1.0</color>
+            </reflective>
+            <reflectivity>
+              <float>0.2</float>
+            </reflectivity>
+            <transparent>
+              <color>1.0 1.0 1.0 1.0</color>
+            </transparent>
+            <transparency>
+              <float>1.0</float>
+            </transparency>
+          </phong>
+        </technique>
+      </profile_COMMON>
+    </effect>
+  </library_effects>
+  <library_materials>
+    <material id="TROPINKA-Material">
+      <instance_effect url="#TROPINKA-Effect"/>
+    </material>
+  </library_materials>
+  <library_geometries>
+    <geometry id="TROPINKA-Geom" name="TROPINKA-Geom">
+      <mesh>
+        <source id="TROPINKA-Pos">
+          <float_array count="72" id="TROPINKA-Pos-array">-16.0 -16.0 16.0 -16.0 -14.0 16.0 -16.0 -14.0 -16.0 -16.0 -16.0 -16.0 15.0 -16.0 -16.0 15.0 -14.0 -16.0 15.0 -14.0 16.0 15.0 -16.0 16.0 -16.0 -16.0 -16.0 15.0 -16.0 -16.0 15.0 -16.0 16.0 -16.0 -16.0 16.0 -16.0 -14.0 16.0 15.0 -14.0 16.0 15.0 -14.0 -16.0 -16.0 -14.0 -16.0 -16.0 -14.0 -16.0 15.0 -14.0 -16.0 15.0 -16.0 -16.0 -16.0 -16.0 -16.0 -16.0 -16.0 16.0 15.0 -16.0 16.0 15.0 -14.0 16.0 -16.0 -14.0 16.0 </float_array>
+          <technique_common>
+            <accessor count="24" source="#TROPINKA-Pos-array" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TROPINKA-UV">
+          <float_array count="48" id="TROPINKA-UV-array">0.0 0.75 0.015625 0.75 0.015625 1.0 0.0 1.0 0.03125 1.0 0.046875 1.0 0.046875 0.75 0.03125 0.75 0.265625 1.0 0.5078125 1.0 0.5078125 0.75 0.265625 0.75 0.0 0.484375 0.2421875 0.484375 0.2421875 0.734375 0.0 0.734375 0.078125 0.7578125 0.078125 1.0 0.0625 1.0 0.0625 0.7578125 0.09375 0.7578125 0.09375 1.0 0.109375 1.0 0.109375 0.7578125 </float_array>
+          <technique_common>
+            <accessor count="24" source="#TROPINKA-UV-array" stride="2">
+              <param name="S" type="float"/>
+              <param name="T" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <source id="TROPINKA-Normal">
+          <float_array count="18" id="TROPINKA-Normal-array">-1.0 0.0 0.0 1.0 0.0 0.0 0.0 -1.0 0.0 0.0 1.0 0.0 0.0 0.0 -1.0 0.0 0.0 1.0</float_array>
+          <technique_common>
+            <accessor count="6" source="#TROPINKA-Normal-array" stride="3">
+              <param name="X" type="float"/>
+              <param name="Y" type="float"/>
+              <param name="Z" type="float"/>
+            </accessor>
+          </technique_common>
+        </source>
+        <vertices id="TROPINKA-Vertices">
+          <input semantic="POSITION" source="#TROPINKA-Pos"/>
+        </vertices>
+        <polylist count="6" material="TROPINKA-Material">
+          <input offset="0" semantic="VERTEX" source="#TROPINKA-Vertices"/>
+          <input offset="1" semantic="TEXCOORD" set="0" source="#TROPINKA-UV"/>
+          <input offset="2" semantic="NORMAL" source="#TROPINKA-Normal"/>
+          <vcount>4 4 4 4 4 4 </vcount>
+          <p>0 0 0 1 1 0 2 2 0 3 3 0 4 4 1 5 5 1 6 6 1 7 7 1 8 8 2 9 9 2 10 10 2 11 11 2 12 12 3 13 13 3 14 14 3 15 15 3 16 16 4 17 17 4 18 18 4 19 19 4 20 20 5 21 21 5 22 22 5 23 23 5 </p>
+        </polylist>
+      </mesh>
+    </geometry>
+  </library_geometries>
+  <library_animations/>
+  <library_visual_scenes>
+    <visual_scene id="DefaultScene">
+      <node id="TROPINKA" name="TROPINKA">
+        <translate>0 0 0</translate>
+        <rotate>0 0 1 0</rotate>
+        <rotate>0 1 0 0</rotate>
+        <rotate>1 0 0 0</rotate>
+        <scale>1 1 1</scale>
+        <instance_geometry url="#TROPINKA-Geom">
+          <bind_material>
+            <technique_common>
+              <instance_material symbol="TROPINKA-Material" target="#TROPINKA-Material">
+                <bind_vertex_input input_semantic="TEXCOORD" input_set="0" semantic="TROPINKA-tex-bind"/>
+              </instance_material>
+            </technique_common>
+          </bind_material>
+        </instance_geometry>
+      </node>
+    </visual_scene>
+  </library_visual_scenes>
+  <scene>
+    <instance_visual_scene url="#DefaultScene"/>
+  </scene>
+</COLLADA>
