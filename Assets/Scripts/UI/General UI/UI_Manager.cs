@@ -7,6 +7,11 @@ public class UI_Manager : MonoBehaviour
     public PlayerData playerOneData;
     public Slider playerOneHealth;
 
+
+    void Start()
+    {
+        playerOneData.healthDisplay = playerOneHealth;
+    }
     void UpdateHealthBar()
     {
         playerOneHealth.value = playerOneData.health;

@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7888d4a8e68eea4c8b6629a8dc72f41, type: 3}
+  m_Name: Iron_Sword
+  m_EditorClassIdentifier: 
+  itemName: "\u041F\u0440\u043E\u0441\u0442\u043E\u0439 \u043C\u0435\u0447"
+  description: "\u041F\u0440\u043E\u0441\u0442\u043E\u0439 \u043C\u0435\u0447, \u0438\u0437\u0433\u043E\u0442\u043E\u0432\u043B\u0435\u043D\u043D\u044B\u0439
+    \u043D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043D\u044B\u043C \u043A\u0443\u0437\u043D\u0435\u0446\u043E\u043C"
+  model: {fileID: 0}
+  icon: {fileID: 0}
+  cost: 0
+  canDiscard: 0

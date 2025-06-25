@@ -12,8 +12,6 @@ public class Player : NetworkBehaviour
     public PlayerData playerThree;
     public PlayerData playerFour;
 
-
-    public Slider healthValue;
     public CharacterController controller;
     public float runSpeed = 10f;
     public float jumpHeight = 2f;
@@ -36,7 +34,6 @@ public class Player : NetworkBehaviour
 
     void UpdateStats()
     {
-        healthValue.value = playerInfo.health;
         playerInfo.currentPosition = transform.position;
     }
 

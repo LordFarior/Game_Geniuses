@@ -9,5 +9,6 @@ public class PlayerData : ScriptableObject
     public Vector3 currentPosition;
     public int playersCount;
     public float walkSpeed = 5f;
+    public Slider healthDisplay;
 
 }

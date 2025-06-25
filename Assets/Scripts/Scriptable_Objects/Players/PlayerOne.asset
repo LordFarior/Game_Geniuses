@@ -17,3 +17,4 @@ MonoBehaviour:
   currentPosition: {x: 0.2157602, y: -85.51545, z: 9.100623}
   playersCount: 0
   walkSpeed: 9
+  healthDisplay: {fileID: 0}
