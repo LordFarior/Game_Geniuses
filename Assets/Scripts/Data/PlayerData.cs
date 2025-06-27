@@ -10,5 +10,5 @@ public class PlayerData : ScriptableObject
     public int playersCount;
     public float walkSpeed = 5f;
     public Slider healthDisplay;
-
+    public GameObject[] items;
 }
